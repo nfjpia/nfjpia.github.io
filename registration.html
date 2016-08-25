@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NFJPIA</title>
+
+        
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+        <link rel="stylesheet" type="text/css" href="css/site.css">
+       
+        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+
+    </head>
+    <body>
+        
+        <content>
+        <div class="firstContentReg">
+            <nav class="navbar navbar-static-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                <h4 class="brandText" style="margin:0;"><img src="img/nflogo.png" style="width:50px;height:50px;padding:0;margin-top:0;"></h4>
+                </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-right:30px;">
+                <ul class="nav navbar-nav navbar-right" id="navtextcontainer" >
+                    <li ><a href="index.html"><h4 id="navbartext" ><p>Home</p></h4></a></li>
+                </ul>
+                
+                </div>
+            </div>
+            </nav>
+
+            <div class="container dd-about containerFirst">
+                <div class="row">
+                        <div class="col-sm-12">
+                        <br>
+                        <br>
+                        <br>
+                            <center>
+                                <h1 class="bolder">NFJPIA</h1>
+                                <h4 class="bolder">Register for an event today!</h4>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <button type="button" class="mainButton Solo" style="margin-right:5px;" onclick="scrollToSolo()">Solo Registration</button>
+                                <button type="button" class="mainButton Solo" style="margin-left:5px;" onclick="scrollToGroup()">Group Registration</button>
+                            </center>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="secondContentReg">
+            
+
+            <div class="container dd-about containerFirst">
+                <div class="row">
+                        <div class="col-sm-7 dd-about-text">
+                            <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <center><h1>Walang Forever</h1>
+                                <h4>Kaya mag register ka mag-isa</h4></center>
+                        </div>
+                        <div class="col-sm-5 dd-about-text">
+                               <br>
+                                <br>
+                                <br>
+                                <br>
+                                <div class="registrationForm">
+                                    <form>
+                            <div class="form-group">
+                                  <input type="text" id="nameSolo" class="form-control inputReg" placeholder="Name">
+                                  <input type="text" id="regionSolo" class="form-control inputReg " placeholder="Region">
+                                  <input type="text" id="chapterSolo" class="form-control inputReg" placeholder="Local Chapter">
+                                  <input type="text" id="shirtSolo" class="form-control inputReg" placeholder="Size">
+                                  <div class="col-sm-6" style="padding:0;">
+                                      <input type="text" id="courseSolo" class="form-control inputReg" placeholder="Course">
+                                  </div>
+                                  <div class="col-sm-6" style="padding:0;">
+                                      <input type="text" id="yearSolo" class="form-control inputReg" placeholder="Year">
+                                  </div>
+                                  <div class="col-sm-6" style="padding:0;">
+                                  <input type="text" id="emailSolo" class="form-control inputReg" placeholder="Email">
+                                  </div>
+                                  <div class="col-sm-6" style="padding:0;">
+                                  <input type="text" id="contactSolo" class="form-control inputReg" placeholder="Contact">
+                                  </div>
+
+
+                                      
+                              <center><button id="regButton" class="registrationButton solo" >Solo Registration</button></center>
+                            </div>
+                        </form>        
+                                </div>
+                                
+                                
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="thirdContentReg">
+            
+
+            <div class="container dd-about containerFirst">
+                <div class="row">
+                        <div class="col-sm-12">
+                            <center><h1>Group Registration</h1>
+                            <h4 class="bolder">Kasi di ka kuntento sa isa</h4></center>
+                        <br>
+                            <div class="groupContainer">
+
+                                <form>
+                    <div class="form-group">
+                      <div class="col-sm-6" style="padding:0;">
+                      <label for="regionGroup" class="repInfo"><h3 class="bolder">Representative Information</h3></label>
+                      <input type="text" id="regionGroup" class="form-control" placeholder="Region">
+                      <label for="chapterGroup">Local Chapter(School)</label>
+                      <input type="text" id="chapterGroup" class="form-control" placeholder="Local Chapter">
+                      <label for="namecontactGroup">Name of Contact Person</label>
+                      <input type="text" id="namecontactGroup" class="form-control" placeholder="Name">
+                      <label for="contactGroup">Contact No.</label>
+                      <input type="text" id="contactGroup" class="form-control" placeholder="Contact">
+                      <label for="positionGroup">Position</label>
+                      <input type="text" id="positionGroup" class="form-control" placeholder="Position">
+                      </div>
+                      <div class="col-sm-6">
+                      <br>
+                      <br>
+                      <div id="groupRegistrants" style="overflow-y: scroll;width:100%;height:271px;">
+                            
+
+
+                          <div id="contentGroup">
+                              <div class="col-sm-12">
+                                  <div class="col-sm-1" style="padding:0;">
+                                      <p style="width:100%;color:black;">1</p>
+                                  </div>
+                                  <div class="col-sm-5" style="padding:0;">
+                                    <input type="text" id="nameSolo" class="form-control" placeholder="Name">
+                                  </div>
+                                  <div class="col-sm-4" style="padding:0;">
+                                    <input type="text" id="courseSolo" class="form-control" placeholder="Course">
+                                  </div>
+                                  <div class="col-sm-2" style="padding:0;">
+                                    <input type="text" id="yearSolo" class="form-control" placeholder="Year">
+                                  </div>
+                                  <div class="col-sm-4" style="padding:0;">
+                                    <input type="text" id="contactSolo" class="form-control" placeholder="Contact">
+                                  </div>
+                                  <div class="col-sm-5" style="padding:0;">
+                                    <input type="text" id="emailSolo" class="form-control" placeholder="Email">
+                                  </div>
+                                  <div class="col-sm-2" style="padding:0;">
+                                    <input type="text" id="sizeSolo" class="form-control" placeholder="Size">
+                                  </div>
+                              </div>
+                          </div>
+                          <input type="hidden" name="idnum" id="idnum" value="1">
+                          
+                      </div>
+                      <center><button id="addRow" type="button" class="registrationButton addRow" onclick="addRowFunction(this)">Add Row</button></center>
+                      </div>
+
+                      <center><button id="regButton2" class="registrationButton group">Group Registration</button></center>
+                    
+                    </div>
+                </form> 
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4 class="bolder">About</h4>
+                    <p>In quis massa sem. Vestibulum sollicitudin dui ex, quis euismod nibh rhoncus posuere. Suspendisse gravida in urna sed accumsan. Quisque bibendum arcu eu elementum hendrerit. Maecenas non condimentum elit, id tempus est. Morbi varius ornare iaculis. Integer leo ante, porta a arcu eget, sodales efficitur libero. In fringilla iaculis tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam est nulla, tempus id sem eget, tempor euismod eros. Phasellus suscipit erat at dolor ultricies pulvinar. Aliquam eu nisl venenatis, facilisis quam ac, faucibus dui. Proin venenatis odio non congue feugiat. Etiam a elit sed elit sollicitudin mattis sit amet non sapien. Vivamus vitae pulvinar augue.</p>
+                </div>
+                <br>
+                <br>
+                <br>
+                <center>
+                <div class="col-sm-8">
+                    <h4 class="bolder">(c)John Leeroy Gadiane 2016, All Rights Reserved</h4>
+                </div>
+                </center>
+            </div>
+        </div>
+        </content>
+    </body>
+    <link rel="stylesheet" type="text/javascript" href="js/bootstrap.js">
+    <link rel="stylesheet" type="text/javascript" href="js/npm.js">
+    <script type="text/javascript">
+        
+        function addRowFunction(e){
+            var row = document.getElementById("contentGroup");
+            var idNum = parseInt(document.getElementById('idnum').value)+1;
+            row.insertAdjacentHTML('beforeend','<div class="col-sm-12"><div class="col-sm-1" style="padding:0;"><p style="width:100%;color:black;">'+idNum+'</p></div><div class="col-sm-5" style="padding:0;"><input type="text" id="nameSolo" class="form-control" placeholder="Name"></div><div class="col-sm-4" style="padding:0;"><input type="text" id="courseSolo" class="form-control" placeholder="Course"></div><div class="col-sm-2" style="padding:0;"><input type="text" id="yearSolo" class="form-control" placeholder="Year"></div><div class="col-sm-4" style="padding:0;"><input type="text" id="contactSolo" class="form-control" placeholder="Contact"></div><div class="col-sm-5" style="padding:0;"><input type="text" id="emailSolo" class="form-control" placeholder="Email"></div><div class="col-sm-2" style="padding:0;"><input type="text" id="sizeSolo" class="form-control" placeholder="Size"</div></div>');
+            document.getElementById('idnum').value = idNum;
+        }
+
+        function scrollToSolo(){
+            window.scrollTo(0, 620);
+        }
+        function scrollToGroup(){
+            window.scrollTo(0, 1240);
+        }
+    </script>
+</html>
