@@ -23,11 +23,11 @@
                     <p class="bolder midnight-blue" style="margin-top:-15px;margin-left:35px;">JUNIOR PHILIPPINE INSTITUTE</p>
                     <p class="bolder midnight-blue" style="margin-top:-15px;margin-left:35px;">OF ACCOUNTANTS</p>
                 </div>
-                <div class="col-sm-3" style="margin-top:15px;">
-                    <h1><a href="#"  class="bolder midnight-blue noHover2" >HOME</a></h1>
-                <h1 style="margin-top:-10px;"><a href="#" class="bolder midnight-blue noHover2">ABOUT THE LOGO</a></h1>
-                <h1 style="margin-top:-10px;"> <a href="#" class="bolder midnight-blue noHover2">SIUALA FEDERATION</a></h1>
-                <h1 style="margin-top:-10px;"><a href="registration.html" class="bolder midnight-blue noHover2">OFFICERS</a></h1>
+                <div class="col-sm-3 navText" style="margin-top:15px;">
+                    <h1><a href="i.html"  class="bolder midnight-blue noHover2" >HOME</a></h1>
+                <h1 style="margin-top:-10px;"><a onclick="scrollToAbout()" class="bolder midnight-blue noHover2">ABOUT THE LOGO</a></h1>
+                <h1 style="margin-top:-10px;"> <a onclick="scrollToSiuala()" class="bolder midnight-blue noHover2">SIUALA FEDERATION</a></h1>
+                <h1 style="margin-top:-10px;"><a class="bolder midnight-blue noHover2">OFFICERS</a></h1>
                 </div>
 
                 <div class="col-sm-12" style="margin-top:-150px;">
@@ -101,7 +101,7 @@
 
                 <div class="col-sm-12">
                     <div class="col-sm-2"></div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-4">
                            <br><br><br><img src="img/nflogo.png" style="width:300px;height:300px;margin-left:100px;padding:0;">
                     </div>
                     <div class="col-sm-5">
@@ -128,7 +128,7 @@
 
                 <div class="col-sm-12">
                     <div class="col-sm-2"></div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-4">
                            <br><br><br><img src="img/siuala.png" style="width:300px;height:200px;margin-left:100px;padding:0;">
                     </div>
                     <div class="col-sm-5">
@@ -201,4 +201,21 @@ of the organization as co-builder in  making the greater community a better  pla
 
         </content>
         </body>
+            <script type="text/javascript">
+        function scrollToAbout(){
+            window.scrollTo(0, 810);
+        }
+        function scrollToSiuala(){
+            window.scrollTo(0, 1380);
+        }
+        function scrollToEvent(){
+            window.scrollTo(0, 2100);
+        }
+        function scrollToContact(){
+            window.scrollTo(0,2500);
+        }
+        function redirect(){
+            window.location = "registration.html"
+        }
+    </script>
         </html>

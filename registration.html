@@ -75,23 +75,23 @@
                                 <br>
                                 <br>
                                 <div class="registrationForm">
-                                    <form>
+                                <form action="registerSolo.php" method="post">
                             <div class="form-group">
-                                  <input type="text" id="nameSolo" class="form-control inputReg" placeholder="Name">
-                                  <input type="text" id="regionSolo" class="form-control inputReg " placeholder="Region">
-                                  <input type="text" id="chapterSolo" class="form-control inputReg" placeholder="Local Chapter">
-                                  <input type="text" id="shirtSolo" class="form-control inputReg" placeholder="Size">
+                                  <input type="text" id="nameSolo" name="nameSolo" class="form-control inputReg" placeholder="Name">
+                                  <input type="text" id="regionSolo" name="regionSolo" class="form-control inputReg " placeholder="Region">
+                                  <input type="text" id="chapterSolo" name="chapterSolo" class="form-control inputReg" placeholder="Local Chapter">
+                                  <input type="text" id="shirtSolo" name="shirtSolo" class="form-control inputReg" placeholder="Size">
                                   <div class="col-sm-6" style="padding:0;">
-                                      <input type="text" id="courseSolo" class="form-control inputReg" placeholder="Course">
+                                      <input type="text" id="courseSolo" name="courseSolo" class="form-control inputReg" placeholder="Course">
                                   </div>
                                   <div class="col-sm-6" style="padding:0;">
-                                      <input type="text" id="yearSolo" class="form-control inputReg" placeholder="Year">
+                                      <input type="text" id="yearSolo" name="yearSolo" class="form-control inputReg" placeholder="Year">
                                   </div>
                                   <div class="col-sm-6" style="padding:0;">
-                                  <input type="text" id="emailSolo" class="form-control inputReg" placeholder="Email">
+                                  <input type="text" id="emailSolo" name="emailSolo" class="form-control inputReg" placeholder="Email">
                                   </div>
                                   <div class="col-sm-6" style="padding:0;">
-                                  <input type="text" id="contactSolo" class="form-control inputReg" placeholder="Contact">
+                                  <input type="text" id="contactSolo" name="contactSolo" class="form-control inputReg" placeholder="Contact">
                                   </div>
 
 
@@ -119,19 +119,19 @@
                         <br>
                             <div class="groupContainer">
 
-                                <form>
+                                <form action="registerGroup.php" method="post">
                     <div class="form-group">
                       <div class="col-sm-6" style="padding:0;">
                       <label for="regionGroup" class="repInfo"><h3 class="bolder">Representative Information</h3></label>
-                      <input type="text" id="regionGroup" class="form-control" placeholder="Region">
+                      <input type="text" id="regionGroup" name="regionGroup" class="form-control" placeholder="Region">
                       <label for="chapterGroup">Local Chapter(School)</label>
-                      <input type="text" id="chapterGroup" class="form-control" placeholder="Local Chapter">
+                      <input type="text" id="chapterGroup" name="chapterGroup" class="form-control" placeholder="Local Chapter">
                       <label for="namecontactGroup">Name of Contact Person</label>
-                      <input type="text" id="namecontactGroup" class="form-control" placeholder="Name">
+                      <input type="text" id="namecontactGroup" name="namecontactGroup" class="form-control" placeholder="Name">
                       <label for="contactGroup">Contact No.</label>
-                      <input type="text" id="contactGroup" class="form-control" placeholder="Contact">
+                      <input type="text" id="contactGroup" name="contactGroup" class="form-control" placeholder="Contact">
                       <label for="positionGroup">Position</label>
-                      <input type="text" id="positionGroup" class="form-control" placeholder="Position">
+                      <input type="text" id="positionGroup" name="positionGroup" class="form-control" placeholder="Position">
                       </div>
                       <div class="col-sm-6">
                       <br>
@@ -146,22 +146,22 @@
                                       <p style="width:100%;color:black;">1</p>
                                   </div>
                                   <div class="col-sm-5" style="padding:0;">
-                                    <input type="text" id="nameSolo" class="form-control" placeholder="Name">
+                                    <input type="text" id="nameGroup" name="nameGroup1" class="form-control" placeholder="Name">
                                   </div>
                                   <div class="col-sm-4" style="padding:0;">
-                                    <input type="text" id="courseSolo" class="form-control" placeholder="Course">
+                                    <input type="text" id="courseGroup" name="courseGroup1" class="form-control" placeholder="Course">
                                   </div>
                                   <div class="col-sm-2" style="padding:0;">
-                                    <input type="text" id="yearSolo" class="form-control" placeholder="Year">
+                                    <input type="text" id="yearGroup" name="yearGroup1" class="form-control" placeholder="Year">
                                   </div>
                                   <div class="col-sm-4" style="padding:0;">
-                                    <input type="text" id="contactSolo" class="form-control" placeholder="Contact">
+                                    <input type="text" id="contactSpecificGroup" name="contactSpecificGroup1" class="form-control" placeholder="Contact">
                                   </div>
                                   <div class="col-sm-5" style="padding:0;">
-                                    <input type="text" id="emailSolo" class="form-control" placeholder="Email">
+                                    <input type="text" id="emailSpecificGroup" name="emailSpecificGroup1" class="form-control" placeholder="Email">
                                   </div>
                                   <div class="col-sm-2" style="padding:0;">
-                                    <input type="text" id="sizeSolo" class="form-control" placeholder="Size">
+                                    <input type="text" id="sizeGroup" name="sizeGroup1" class="form-control" placeholder="Size">
                                   </div>
                               </div>
                           </div>
@@ -209,7 +209,7 @@
         function addRowFunction(e){
             var row = document.getElementById("contentGroup");
             var idNum = parseInt(document.getElementById('idnum').value)+1;
-            row.insertAdjacentHTML('beforeend','<div class="col-sm-12"><div class="col-sm-1" style="padding:0;"><p style="width:100%;color:black;">'+idNum+'</p></div><div class="col-sm-5" style="padding:0;"><input type="text" id="nameSolo" class="form-control" placeholder="Name"></div><div class="col-sm-4" style="padding:0;"><input type="text" id="courseSolo" class="form-control" placeholder="Course"></div><div class="col-sm-2" style="padding:0;"><input type="text" id="yearSolo" class="form-control" placeholder="Year"></div><div class="col-sm-4" style="padding:0;"><input type="text" id="contactSolo" class="form-control" placeholder="Contact"></div><div class="col-sm-5" style="padding:0;"><input type="text" id="emailSolo" class="form-control" placeholder="Email"></div><div class="col-sm-2" style="padding:0;"><input type="text" id="sizeSolo" class="form-control" placeholder="Size"</div></div>');
+            row.insertAdjacentHTML('beforeend','<div class="col-sm-12"><div class="col-sm-1" style="padding:0;"><p style="width:100%;color:black;">'+idNum+'</p></div><div class="col-sm-5" style="padding:0;"><input type="text" id="nameGroup" name="nameGroup'+idNum+'" class="form-control" placeholder="Name"></div><div class="col-sm-4" style="padding:0;"><input type="text" id="courseGroup" name="courseGroup'+idNum+'" class="form-control" placeholder="Course"></div><div class="col-sm-2" style="padding:0;"><input type="text" id="yearGroup" name="yearGroup'+idNum+'" class="form-control" placeholder="Year"></div><div class="col-sm-4" style="padding:0;"><input type="text" id="contactSpecificGroup" name="contactSpecificGroup'+idNum+'" class="form-control" placeholder="Contact"></div><div class="col-sm-5" style="padding:0;"><input type="text" id="emailSpecificGroup" name="emailSpecificGroup'+idNum+'" class="form-control" placeholder="Email"></div><div class="col-sm-2" style="padding:0;"><input type="text" id="sizeGroup" name="sizeGroup'+idNum+'" class="form-control" placeholder="Size"</div></div>');
             document.getElementById('idnum').value = idNum;
         }
 

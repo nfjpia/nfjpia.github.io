@@ -2,13 +2,14 @@
 <?php
    include("databaseConnector.php");
    createDB();
-   session_start();
+   
    
    if(isset($_POST['login'])){
 	if($_POST['username'] === 'almar' && $_POST['password'] === 'admin123'){
-		$_SESSION['username']=$username;
+		session_start();
+		$_SESSION['username']='almar';
 
-		echo "<script>window.open('home.php','_self')</script>";
+		echo "<script>window.open('dashboard.php','_self')</script>";
 	}
 
 
