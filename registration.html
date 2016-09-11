@@ -77,8 +77,8 @@
                                 <div class="registrationForm">
                                 <form action="http://formspree.io/jgadiane@gmail.com" method="post">
                             <div class="form-group">
-                                  <input type="text" id="nameSolo" name="nameSolo" class="form-control inputReg" placeholder="Name">
-                                  <select id="regionSolo" name="regionSolo" class="form-control inputReg " placeholder="Region">
+                                  <input type="text" id="nameSolo" name="Name" class="form-control inputReg" placeholder="Name">
+                                  <select id="regionSolo" name="Region" class="form-control inputReg " placeholder="Region">
                                     <option value="Region 1 & Car">Region 1 & CAR</option>
                                     <option value="Region 2">Region 2</option>
                                     <option value="Region 3">Region 3</option>
@@ -92,8 +92,8 @@
                                     <option value="Region 11">Region 11</option>
                                     <option value="Region 12">Region 12</option>
                                   </select>
-                                  <input type="text" id="chapterSolo" name="chapterSolo" class="form-control inputReg" placeholder="Local Chapter">
-                                  <select id="shirtSolo" name="shirtSolo" class="form-control inputReg" placeholder="Shirt Size">
+                                  <input type="text" id="chapterSolo" name="Chapter" class="form-control inputReg" placeholder="Local Chapter">
+                                  <select id="shirtSolo" name="Shirt" class="form-control inputReg" placeholder="Shirt Size">
                                     <option value="Extra Small">XS</option>
                                     <option value="Small">S</option>
                                     <option value="Medium">M</option>
@@ -102,20 +102,44 @@
                                     <option value="2X Large">XXL</option>
                                   </select>
                                   <div class="col-sm-6" style="padding:0;">
-                                      <input type="text" id="courseSolo" name="courseSolo" class="form-control inputReg" placeholder="Course">
+                                      <input type="text" id="courseSolo" name="Course" class="form-control inputReg" placeholder="Course">
                                   </div>
                                   <div class="col-sm-6" style="padding:0;">
-                                      <input type="text" id="yearSolo" name="yearSolo" class="form-control inputReg" placeholder="Year">
+                                      <input type="text" id="yearSolo" name="Year" class="form-control inputReg" placeholder="Year">
                                   </div>
                                   <div class="col-sm-6" style="padding:0;">
-                                  <input type="text" id="emailSolo" name="emailSolo" class="form-control inputReg" placeholder="Email">
+                                  <input type="text" id="emailSolo" name="Email" class="form-control inputReg" placeholder="Email">
                                   </div>
                                   <div class="col-sm-6" style="padding:0;">
-                                  <input type="text" id="contactSolo" name="contactSolo" class="form-control inputReg" placeholder="Contact">
+                                  <input type="text" id="contactSolo" name="Contact" class="form-control inputReg" placeholder="Contact">
                                   </div>
+                                  <div class="col-sm-6" style="padding:0;">
+                                  <input type="radio" name="type" id="academic" value="Academic" /><p class="cloud" style="display:inline-block;">Academic</p>
+                                  <input type="radio" name="type" id="nonacademic" value="Non - Academic" /><p class="cloud" style="display:inline-block;">Non - Academic</p>
+                                  </div>
+                                  <select id="comboacademic" class="Xcombo" style="display:none">
+                                     <option value="Financial Accounting & Reporting Cup">Financial Accounting & Reporting Cup</option>
+                                     <option value="Advance Fin. Accounting & Reporting Cup">Advance Fin. Accounting & Reporting Cup</option>
+                                     <option value="Regulatory Framework for Business Trans. Cup">Regulatory Framework for Business Trans. Cup</option>
+                                     <option value="Management Accounting and Control Cup">Management Accounting and Control Cup</option>
+                                     <option value="Auditing Cup">Auditing Cup</option>
+                                     <option value="Taxation Cup">Taxation Cup</option>
+                                     <option value="NAQDown">NAQDown</option>
+                                     <option value="Business Case Competition">Business Case Competition</option>
+                                     <option value="Specialized Case Study">Specialized Case Study</option>
+                                  </select>
+                                  <select id="combononacademic" class="Xcombo" style="display:none">
+                                     <option value="Lip Sync Battle">Lip Sync Battle</option>
+                                     <option value="JPIA Parody">JPIA Parody</option>
+                                     <option value="Fashion House Competition">Fashion House Competition</option>
+                                     <option value="NFJPIA Best Dance Crew">NFJPIA Best Dance Crew</option>
+                                     <option value="Speak Up!">Speak Up!</option>
+                                     <option value="Non-Academic Quiz Showdown">Non-Academic Quiz Showdown</option>
+                                     <option value="Ambassadors of Goodwill">Ambassadors of Goodwill</option>
+                                     <option value="Sineratura v3.0">Sineratura v3.0</option>
+                                  </select>
 
 
-                                      
                               <center><button id="regButton" class="registrationButton solo" >Solo Registration</button></center>
                             </div>
                         </form>        
@@ -143,13 +167,26 @@
                     <div class="form-group">
                       <div class="col-sm-6" style="padding:0;">
                       <label for="regionGroup" class="repInfo"><h3 class="bolder">Representative Information</h3></label>
-                      <input type="text" id="regionGroup" name="Region" class="form-control" placeholder="Region">
+                      <select id="regionSolo" name="Region" class="form-control inputReg " placeholder="Region">
+                                    <option value="Region 1 & Car">Region 1 & CAR</option>
+                                    <option value="Region 2">Region 2</option>
+                                    <option value="Region 3">Region 3</option>
+                                    <option value="Region 4">Region 4</option>
+                                    <option value="Region 5">Region 5</option>
+                                    <option value="Region 6">Region 6</option>
+                                    <option value="Region 7">Region 7</option>
+                                    <option value="Region 8">Region 8</option>
+                                    <option value="Region 9">Region 9</option>
+                                    <option value="Region 10 & CARAGA">Region 10 & CARAGA</option>
+                                    <option value="Region 11">Region 11</option>
+                                    <option value="Region 12">Region 12</option>
+                                  </select>
                       <label for="chapterGroup">Local Chapter(School)</label>
                       <input type="text" id="chapterGroup" name="Chapter" class="form-control" placeholder="Local Chapter">
                       <label for="namecontactGroup">Name of Contact Person</label>
-                      <input type="text" id="namecontactGroup" name="Namecontact" class="form-control" placeholder="Name">
+                      <input type="text" id="namecontactGroup" name="Name Contact" class="form-control" placeholder="Name">
                       <label for="contactGroup">Contact No.</label>
-                      <input type="text" id="contactGroup" name="Contact" class="form-control" placeholder="Contact">
+                      <input type="text" id="contactGroup" name="Contact Number" class="form-control" placeholder="Contact">
                       <label for="positionGroup">Position</label>
                       <input type="text" id="positionGroup" name="Position" class="form-control" placeholder="Position">
                       </div>
@@ -181,7 +218,14 @@
                                     <input type="text" id="emailSpecificGroup" name="Email" class="form-control" placeholder="Email">
                                   </div>
                                   <div class="col-sm-2" style="padding:0;">
-                                    <input type="text" id="sizeGroup" name="Size" class="form-control" placeholder="Shirt Size">
+                                    <select id="shirtGroup" name="Size of Shirt" class="form-control inputReg" placeholder="Shirt Size">
+                                    <option value="Extra Small">XS</option>
+                                    <option value="Small">S</option>
+                                    <option value="Medium">M</option>
+                                    <option value="Large">L</option>
+                                    <option value="Extra Large">XL</option>
+                                    <option value="2X Large">XXL</option>
+                                  </select>
                                   </div>
                               </div>
                           </div>
@@ -224,9 +268,10 @@
 
         </content>
     </body>
+    <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/npm.js"></script>
-    <script src="js/jquery.js"></script>
+    
     <script type="text/javascript">
         
         function addRowFunction(e){
@@ -236,12 +281,6 @@
             document.getElementById('idnum').value = idNum;
         }
 
-        function scrollToSolo(){
-            window.scrollTo(0, 620);
-        }
-        function scrollToGroup(){
-            window.scrollTo(0, 1240);
-        }
                 
     </script>
 
@@ -293,6 +332,15 @@
     return [];
   }
  
+});
+    </script>
+    <script type="text/javascript">
+      $(function () {
+    $('input[type=\'radio\']').click(function () {
+        
+        $('select.Xcombo').hide();
+        $('#combo' + $(this).attr('id')).show();                
+    });
 });
     </script>
 </html>
