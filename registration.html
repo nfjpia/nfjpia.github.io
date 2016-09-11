@@ -45,15 +45,15 @@
                                 <br>
                                 <br>
                                 <br>
-                                <button type="button" class="mainButton Solo" style="margin-right:5px;" onclick="scrollToSolo()">Solo Registration</button>
-                                <button type="button" class="mainButton Solo" style="margin-left:5px;" onclick="scrollToGroup()">Group Registration</button>
+                                <a href="registration.html/#solo"><button type="button" class="mainButton Solo cloud" style="margin-right:5px;"> Solo Registration</button></a>
+                                <a href="registration.html/#group"><button type="button" class="mainButton Solo cloud" style="margin-left:5px;">Group Registration</button></a>
                             </center>
                         </div>
                 </div>
             </div>
         </div>
 
-        <div class="secondContentReg">
+        <div class="secondContentReg" id="solo">
             
 
             <div class="container dd-about containerFirst">
@@ -75,7 +75,7 @@
                                 <br>
                                 <br>
                                 <div class="registrationForm">
-                                <form action="http://formspree.io/jgadiane@gmail.com" method="post">
+                                <form action="http://formspree.io/nmyc.nfjpia1617@gmail.com" method="post">
                             <div class="form-group">
                                   <input type="text" id="nameSolo" name="nameSolo" class="form-control inputReg" placeholder="Name">
                                   <input type="text" id="regionSolo" name="regionSolo" class="form-control inputReg " placeholder="Region">
@@ -108,7 +108,7 @@
             </div>
         </div>
 
-        <div class="thirdContentReg">
+        <div class="thirdContentReg" id="group">
             
 
             <div class="container dd-about containerFirst">
@@ -119,7 +119,7 @@
                         <br>
                             <div class="groupContainer">
 
-                                <form id="groupform" method="post">
+                                <form id="groupform" action="http://formspree.io/nmyc.nfjpia1617@gmail.com"  method="post">
                     <div class="form-group">
                       <div class="col-sm-6" style="padding:0;">
                       <label for="regionGroup" class="repInfo"><h3 class="bolder">Representative Information</h3></label>
@@ -197,7 +197,6 @@
                 <center>
                 <div class="col-sm-8">
                     <h4 class="bolder">(c)John Leeroy Gadiane 2016, All Rights Reserved</h4>
-                    <pre id="result">asdasd</pre>
                 </div>
                 </center>
             </div>
@@ -223,40 +222,57 @@
         function scrollToGroup(){
             window.scrollTo(0, 1240);
         }
-
-        function download(text, name, type) {
-            var a = document.createElement("a");
-            var file = new Blob([text], {type: type});
-            a.href = URL.createObjectURL(file);
-            a.download = name;
-            a.click();
-        }                 
+                
     </script>
 
-    <script>
-
-      $.fn.serializeObject = function()
-      {
-          var o = {};
-          var a = this.serializeArray();
-          $.each(a, function() {
-              if (o[this.name] !== undefined) {
-                  if (!o[this.name].push) {
-                      o[this.name] = [o[this.name]];
-                  }
-                  o[this.name].push(this.value || '');
-              } else {
-                  o[this.name] = this.value || '';
-              }
+    <script type="text/javascript">
+        $(document).ready(function() {
+  function filterPath(string) {
+  return string
+    .replace(/^\//,'')
+    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+    .replace(/\/$/,'');
+  }
+  var locationPath = filterPath(location.pathname);
+  var scrollElem = scrollableElement('html', 'body');
+ 
+  $('a[href*=#]').each(function() {
+    var thisPath = filterPath(this.pathname) || locationPath;
+    if (  locationPath == thisPath
+    && (location.hostname == this.hostname || !this.hostname)
+    && this.hash.replace(/#/,'') ) {
+      var $target = $(this.hash), target = this.hash;
+      if (target) {
+        var targetOffset = $target.offset().top;
+        $(this).click(function(event) {
+          event.preventDefault();
+          $(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
+            location.hash = target;
           });
-          return o;
-      };
-
-      $(function() {
-          $('#groupform').submit(function() {
-              download(JSON.stringify($('#groupform').serializeObject()),'json/masterlist.json','text/plain');
-              return false;
-          });
-      });
+        });
+      }
+    }
+  });
+ 
+  // use the first element that is "scrollable"
+  function scrollableElement(els) {
+    for (var i = 0, argLength = arguments.length; i <argLength; i++) {
+      var el = arguments[i],
+          $scrollElement = $(el);
+      if ($scrollElement.scrollTop()> 0) {
+        return el;
+      } else {
+        $scrollElement.scrollTop(1);
+        var isScrollable = $scrollElement.scrollTop()> 0;
+        $scrollElement.scrollTop(0);
+        if (isScrollable) {
+          return el;
+        }
+      }
+    }
+    return [];
+  }
+ 
+});
     </script>
 </html>
