@@ -163,11 +163,11 @@
                         <br>
                             <div class="groupContainer">
 
-                                <form id="groupform" action="http://formspree.io/nmyc.nfjpia1617@gmail.com"  method="post">
+                                <form id="groupform" action="http://formspree.io/jgadiane@gmail.com"  method="post">
                     <div class="form-group">
                       <div class="col-sm-6" style="padding:0;">
                       <label for="regionGroup" class="repInfo"><h3 class="bolder">Representative Information</h3></label>
-                      <select id="regionSolo" name="Region" class="form-control inputReg " placeholder="Region">
+                      <select id="regionSolo" name="Region" class="form-control inputReg " placeholder="Region" style="padding:0;height:25px;">
                                     <option value="Region 1 & Car">Region 1 & CAR</option>
                                     <option value="Region 2">Region 2</option>
                                     <option value="Region 3">Region 3</option>
@@ -199,6 +199,7 @@
 
                           <div id="contentGroup">
                               <div class="col-sm-12">
+                                  <input type="hidden" name="idnum" id="idnum" value="1">
                                   <div class="col-sm-1" style="padding:0;">
                                       <p style="width:100%;color:black;">1</p>
                                   </div>
@@ -218,7 +219,7 @@
                                     <input type="text" id="emailSpecificGroup" name="Email" class="form-control" placeholder="Email">
                                   </div>
                                   <div class="col-sm-2" style="padding:0;">
-                                    <select id="shirtGroup" name="Size of Shirt" class="form-control inputReg" placeholder="Shirt Size">
+                                    <select id="shirtGroup" name="Size of Shirt" class="form-control inputReg" placeholder="Shirt Size" style="margin-top:0px;">
                                     <option value="Extra Small">XS</option>
                                     <option value="Small">S</option>
                                     <option value="Medium">M</option>
@@ -227,6 +228,33 @@
                                     <option value="2X Large">XXL</option>
                                   </select>
                                   </div>
+                                  <div class="col-sm-12" style="padding:0;">
+                                  <div class="col-sm-1"></div>
+                                  <input type="radio" name="type" id="academic1" class="radButton1 radButton" value="Academic" /><p class="midnight-blue" style="display:inline-block;">Academic</p>
+                                  <input type="radio" name="type" id="nonacademic1" class="radButton1 radButton" value="Non - Academic" /><p class="midnight-blue" style="display:inline-block;">Non - Academic</p>
+                                  </div>
+                                  <div class="col-sm-1"></div>
+                                  <select id="comboacademic1" name="Event" class="radButton1 midnight-blue" style="display:none" >
+                                     <option value="Financial Accounting & Reporting Cup" class="bolder midnight-blue">Financial Accounting & Reporting Cup</option>
+                                     <option value="Advance Fin. Accounting & Reporting Cup" class="bolder midnight-blue">Advance Fin. Accounting & Reporting Cup</option>
+                                     <option value="Regulatory Framework for Business Trans. Cup" class="bolder midnight-blue">Regulatory Framework for Business Trans. Cup</option>
+                                     <option value="Management Accounting and Control Cup" class="bolder midnight-blue">Management Accounting and Control Cup</option>
+                                     <option value="Auditing Cup" class="bolder midnight-blue">Auditing Cup</option>
+                                     <option value="Taxation Cup" class="bolder midnight-blue">Taxation Cup</option>
+                                     <option value="NAQDown" class="bolder midnight-blue">NAQDown</option>
+                                     <option value="Business Case Competition" class="bolder midnight-blue">Business Case Competition</option>
+                                     <option value="Specialized Case Study" class="bolder midnight-blue">Specialized Case Study</option>
+                                  </select>
+                                  <select id="combononacademic1" name="Event" class="radButton1 midnight-blue" style="display:none">
+                                     <option value="Lip Sync Battle" class="bolder midnight-blue">Lip Sync Battle</option>
+                                     <option value="JPIA Parody" class="bolder midnight-blue">JPIA Parody</option>
+                                     <option value="Fashion House Competition" class="bolder midnight-blue">Fashion House Competition</option>
+                                     <option value="NFJPIA Best Dance Crew" class="bolder midnight-blue">NFJPIA Best Dance Crew</option>
+                                     <option value="Speak Up!" class="bolder midnight-blue">Speak Up!</option>
+                                     <option value="Non-Academic Quiz Showdown" class="bolder midnight-blue">Non-Academic Quiz Showdown</option>
+                                     <option value="Ambassadors of Goodwill" class="bolder midnight-blue">Ambassadors of Goodwill</option>
+                                     <option value="Sineratura v3.0" class="bolder midnight-blue">Sineratura v3.0</option>
+                                  </select>
                               </div>
                           </div>
                           <input type="hidden" name="idnum" id="idnum" value="1">
@@ -277,9 +305,10 @@
         function addRowFunction(e){
             var row = document.getElementById("contentGroup");
             var idNum = parseInt(document.getElementById('idnum').value)+1;
-            row.insertAdjacentHTML('beforeend','<div class="col-sm-12"><div class="col-sm-1" style="padding:0;"><p style="width:100%;color:black;">'+idNum+'</p></div><div class="col-sm-5" style="padding:0;"><input type="text" id="nameGroup" name="Name'+idNum+'" class="form-control" placeholder="Name"></div><div class="col-sm-4" style="padding:0;"><input type="text" id="courseGroup" name="Course'+idNum+'" class="form-control" placeholder="Course"></div><div class="col-sm-2" style="padding:0;"><input type="text" id="yearGroup" name="Year'+idNum+'" class="form-control" placeholder="Year"></div><div class="col-sm-4" style="padding:0;"><input type="text" id="contactSpecificGroup" name="Contact'+idNum+'" class="form-control" placeholder="Contact"></div><div class="col-sm-5" style="padding:0;"><input type="text" id="emailSpecificGroup" name="Email'+idNum+'" class="form-control" placeholder="Email"></div><div class="col-sm-2" style="padding:0;"><input type="text" id="sizeGroup" name="Size'+idNum+'" class="form-control" placeholder="Size"</div></div>');
-            document.getElementById('idnum').value = idNum;
-        }
+            row.insertAdjacentHTML('beforeend','<div class="col-sm-12"><input type="hidden" name="idnum" id="idnum" value="'+idNum+'"><div class="col-sm-1" style="padding:0;"><p style="width:100%;color:black;">'+idNum+'</p></div><div class="col-sm-5" style="padding:0;"><input type="text" id="nameGroup" name="Name'+idNum+'" class="form-control" placeholder="Name"></div><div class="col-sm-4" style="padding:0;"><input type="text" id="courseGroup" name="Course'+idNum+'" class="form-control" placeholder="Course"></div><div class="col-sm-2" style="padding:0;"><input type="text" id="yearGroup" name="Year'+idNum+'" class="form-control" placeholder="Year"></div><div class="col-sm-4" style="padding:0;"><input type="text" id="contactSpecificGroup" name="Contact'+idNum+'" class="form-control" placeholder="Contact"></div><div class="col-sm-5" style="padding:0;"><input type="text" id="emailSpecificGroup" name="Email'+idNum+'" class="form-control" placeholder="Email"></div><div class="col-sm-2" style="padding:0;"><select style="margin-top:0px;" id="shirtGroup" name="Size of Shirt'+idNum+'" class="form-control inputReg" placeholder="Shirt Size"><option value="Extra Small">XS</option><option value="Small">S</option><option value="Medium">M</option><option value="Large">L</option><option value="Extra Large">XL</option><option value="2X Large">XXL</option></select></div><div class="col-sm-12" style="padding:0;"><div class="col-sm-1"></div><input type="radio" name="type'+idNum+'" id="academic'+idNum+'" class="radButton'+idNum+' radButton" value="Academic"  /><p class="midnight-blue" style="display:inline-block;">Academic</p><input type="radio" name="type'+idNum+'" id="nonacademic'+idNum+'" value="Non - Academic" class="radButton'+idNum+' radButton" /><p class="midnight-blue" style="display:inline-block;">Non - Academic</p></div><div class="col-sm-1"></div><select id="comboacademic'+idNum+'" name="Event" class="radButton'+idNum+' midnight-blue" style="display:none" ><option value="Financial Accounting & Reporting Cup" class="bolder midnight-blue">Financial Accounting & Reporting Cup</option><option value="Advance Fin. Accounting & Reporting Cup" class="bolder midnight-blue">Advance Fin. Accounting & Reporting Cup</option><option value="Regulatory Framework for Business Trans. Cup" class="bolder midnight-blue">Regulatory Framework for Business Trans. Cup</option><option value="Management Accounting and Control Cup" class="bolder midnight-blue">Management Accounting and Control Cup</option><option value="Auditing Cup" class="bolder midnight-blue">Auditing Cup</option><option value="Taxation Cup" class="bolder midnight-blue">Taxation Cup</option><option value="NAQDown" class="bolder midnight-blue">NAQDown</option><option value="Business Case Competition" class="bolder midnight-blue">Business Case Competition</option> <option value="Specialized Case Study" class="bolder midnight-blue">Specialized Case Study</option> </select> <select id="combononacademic'+idNum+'" name="Event" class="radButton'+idNum+' midnight-blue" style="display:none"> <option value="Lip Sync Battle" class="bolder midnight-blue">Lip Sync Battle</option> <option value="JPIA Parody" class="bolder midnight-blue">JPIA Parody</option> <option value="Fashion House Competition" class="bolder midnight-blue">Fashion House Competition</option> <option value="NFJPIA Best Dance Crew" class="bolder midnight-blue">NFJPIA Best Dance Crew</option> <option value="Speak Up!" class="bolder midnight-blue">Speak Up!</option> <option value="Non-Academic Quiz Showdown" class="bolder midnight-blue">Non-Academic Quiz Showdown</option> <option value="Ambassadors of Goodwill" class="bolder midnight-blue">Ambassadors of Goodwill</option> <option value="Sineratura v3.0" class="bolder midnight-blue">Sineratura v3.0</option></select></div>'); 
+
+            document.getElementById('idnum').value = idNum; 
+          }
 
                 
     </script>
@@ -336,9 +365,18 @@
     </script>
     <script type="text/javascript">
       $(function () {
-    $('input[type=\'radio\']').click(function () {
+    $('input[type=\'radio\']').on('click' , function () {
         
         $('select.Xcombo').hide();
+        $('#combo' + $(this).attr('id')).show();                
+    });
+});
+    </script>
+    <script type="text/javascript">
+      $(function () {
+    $('.col-sm-12').on('click', 'input.radButton' , function () {
+        
+        $('select.' + $(this).attr('class')).hide();
         $('#combo' + $(this).attr('id')).show();                
     });
 });
