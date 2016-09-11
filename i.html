@@ -66,14 +66,14 @@
             <div class="col-sm-1"></div>
             <div class="col-sm-2 navText">
                 <h2><a href="#"  class="bolder cloud" >HOME</a></h2>
-                <h2 style="margin-top:-10px;"><a onclick="scrollToAbout()" class="bolder cloud">ABOUT US</a></h2>
-                <h2 style="margin-top:-10px;"> <a onclick="scrollToBlog()" class="bolder cloud">BLOG</a></h2>
+                <h2 style="margin-top:-10px;"><a href="i.html/#second" class="bolder cloud">ABOUT US</a></h2>
+                <h2 style="margin-top:-10px;"> <a href="i.html/#blog" class="bolder cloud">BLOG</a></h2>
                 <h2 style="margin-top:-10px;"><a href="registration.html" class="bolder cloud">REGISTRATION</a></h2>
-                <h2 style="margin-top:-10px;"><a onclick="scrollToContact()" class="bolder cloud">CONTACT US</a></h2>
+                <h2 style="margin-top:-10px;"><a href="i.html/#contact" class="bolder cloud">CONTACT US</a></h2>
             </div>
         </div>
 
-        <div class="secondContent">
+        <div class="secondContent" id="second">
             <div class="row">
                 <div class="col-sm-1"></div>
                 <div class="col-sm-4">
@@ -143,20 +143,21 @@ potential - thus supplying quality workforce worthy of global recognition.</p>
                 </div>
         </div>
 
-        <div class="thirdContent">
+        <div class="thirdContent" id="third">
             <center>
             <br><br>
                 <h1 class="vision-text larger">Lorem ipsum dolor</h1>
             </center>
         </div>
 
-        <div class="fourthContent">
+        <div class="fourthContent" id="blog">
             <center>
-            <br><br><br><br>
+            <br>
             </center>
+            <center><h1 class="bolder">BLOGS</h1></center>
             <center><h1 class="bolder" style="margin-top:-40px;">__________</h1></center>
             <center>
-            <!-- <div class="blog_container">
+            <div class="blog_container">
                 <div class="blog_content">
                     <div class="firstBlog">
                         <div class="row">
@@ -164,8 +165,8 @@ potential - thus supplying quality workforce worthy of global recognition.</p>
                                 <img src="img/picture.png">
                             </div>
                             <div class="col-sm-10" style="margin-top:-20px;">
-                                <h2 class="bolder">Lorem Ipsum</h2>
-                                <p class="bolder">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a porta eros. Sed dapibus neque quis rutrum posuere. Sed porttitor mi non ultricies iaculis. Pellentesque et nulla magna. Ut nec consectetur urna. Cras a interdum massa, id consequat magna. Nulla in tincidunt mi, eu tincidunt nibh</p><a href="#">Read More.</a>
+                                <h2 class="bolder">The National Executive Board Meeting</h2>
+                                <p class="bolder">Last May 29, 2016 to June 1, 2016, the National Federation of Junior Philippine Institute of Accountants (NFJPIA) conducted its 1st National Executive Board Meeting at the Z Hostel, Makati City, Metro Manila.</p><a href="blog.html">Read More.</a>
                             </div>
                         
                         </div>
@@ -184,10 +185,7 @@ potential - thus supplying quality workforce worthy of global recognition.</p>
                     </div>
                     
                 </div>
-            </div> -->
-            <h1 class="bolder midnight-blue">Be updated with the Current Articles</h1>
-            <a href="blog.html" class="noHover"><h1 class="bolder larger midnight-blue">Click Here to Go To Blogs</h1></a>
-
+            </div>
             </center>
 
         </div>
@@ -216,7 +214,7 @@ potential - thus supplying quality workforce worthy of global recognition.</p>
                     </center>
         </div>
 
-        <div class="contactUs">
+        <div class="contactUs" id="contact">
             <div class="row contactUsRow">
                 <div class="col-sm-7">
                     <div class="inputs">
@@ -301,8 +299,9 @@ potential - thus supplying quality workforce worthy of global recognition.</p>
         </content>
 
     </body>
-    <link rel="stylesheet" type="text/javascript" href="js/bootstrap.js">
-    <link rel="stylesheet" type="text/javascript" href="js/npm.js">
+    <script src="js/bootstrap.js"></script>
+    <script src="js/npm.js"></script>
+    <script src="js/jquery.js"></script>
     <script type="text/javascript">
         function selectionChange(sel) {
             if(sel.options[sel.selectedIndex].text === '--Select--'){
@@ -338,5 +337,57 @@ potential - thus supplying quality workforce worthy of global recognition.</p>
         function redirect(){
             window.location = "registration.html"
         }
+    </script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+  function filterPath(string) {
+  return string
+    .replace(/^\//,'')
+    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+    .replace(/\/$/,'');
+  }
+  var locationPath = filterPath(location.pathname);
+  var scrollElem = scrollableElement('html', 'body');
+ 
+  $('a[href*=#]').each(function() {
+    var thisPath = filterPath(this.pathname) || locationPath;
+    if (  locationPath == thisPath
+    && (location.hostname == this.hostname || !this.hostname)
+    && this.hash.replace(/#/,'') ) {
+      var $target = $(this.hash), target = this.hash;
+      if (target) {
+        var targetOffset = $target.offset().top;
+        $(this).click(function(event) {
+          event.preventDefault();
+          $(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
+            location.hash = target;
+          });
+        });
+      }
+    }
+  });
+ 
+  // use the first element that is "scrollable"
+  function scrollableElement(els) {
+    for (var i = 0, argLength = arguments.length; i <argLength; i++) {
+      var el = arguments[i],
+          $scrollElement = $(el);
+      if ($scrollElement.scrollTop()> 0) {
+        return el;
+      } else {
+        $scrollElement.scrollTop(1);
+        var isScrollable = $scrollElement.scrollTop()> 0;
+        $scrollElement.scrollTop(0);
+        if (isScrollable) {
+          return el;
+        }
+      }
+    }
+    return [];
+  }
+ 
+});
     </script>
 </html>

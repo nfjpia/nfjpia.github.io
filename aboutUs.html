@@ -25,8 +25,8 @@
                 </div>
                 <div class="col-sm-3 navText" style="margin-top:15px;">
                     <h1><a href="i.html"  class="bolder midnight-blue noHover2" >HOME</a></h1>
-                <h1 style="margin-top:-10px;"><a onclick="scrollToAbout()" class="bolder midnight-blue noHover2">ABOUT THE LOGO</a></h1>
-                <h1 style="margin-top:-10px;"> <a onclick="scrollToSiuala()" class="bolder midnight-blue noHover2">SIUALA FEDERATION</a></h1>
+                <h1 style="margin-top:-10px;"><a href="aboutUs.html/#about" class="bolder midnight-blue noHover2">ABOUT THE LOGO</a></h1>
+                <h1 style="margin-top:-10px;"> <a href="aboutUs.html/#siuala" class="bolder midnight-blue noHover2">SIUALA FEDERATION</a></h1>
                 <h1 style="margin-top:-10px;"><a class="bolder midnight-blue noHover2">OFFICERS</a></h1>
                 </div>
 
@@ -99,12 +99,12 @@
                 </div>
 
 
-                <div class="col-sm-12">
+                <div class="col-sm-12" id="about">
                     <div class="col-sm-2"></div>
                     <div class="col-sm-4">
                            <br><br><br><img src="img/nflogo.png" style="width:300px;height:300px;margin-left:100px;padding:0;">
                     </div>
-                    <div class="col-sm-5">
+                    <div class="col-sm-5" >
 
                         <br><br><br>
                         <h1 class="bolder large midnight-blue">NFJPIA LOGO</h1>
@@ -126,7 +126,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-12">
+                <div class="col-sm-12" id="siuala">
                     <div class="col-sm-2"></div>
                     <div class="col-sm-4">
                            <br><br><br><img src="img/siuala.png" style="width:300px;height:200px;margin-left:100px;padding:0;">
@@ -201,6 +201,9 @@ of the organization as co-builder in  making the greater community a better  pla
 
         </content>
         </body>
+        <script src="js/bootstrap.js"></script>
+    <script src="js/npm.js"></script>
+    <script src="js/jquery.js"></script>
             <script type="text/javascript">
         function scrollToAbout(){
             window.scrollTo(0, 810);
@@ -217,5 +220,55 @@ of the organization as co-builder in  making the greater community a better  pla
         function redirect(){
             window.location = "registration.html"
         }
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+  function filterPath(string) {
+  return string
+    .replace(/^\//,'')
+    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+    .replace(/\/$/,'');
+  }
+  var locationPath = filterPath(location.pathname);
+  var scrollElem = scrollableElement('html', 'body');
+ 
+  $('a[href*=#]').each(function() {
+    var thisPath = filterPath(this.pathname) || locationPath;
+    if (  locationPath == thisPath
+    && (location.hostname == this.hostname || !this.hostname)
+    && this.hash.replace(/#/,'') ) {
+      var $target = $(this.hash), target = this.hash;
+      if (target) {
+        var targetOffset = $target.offset().top;
+        $(this).click(function(event) {
+          event.preventDefault();
+          $(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
+            location.hash = target;
+          });
+        });
+      }
+    }
+  });
+ 
+  // use the first element that is "scrollable"
+  function scrollableElement(els) {
+    for (var i = 0, argLength = arguments.length; i <argLength; i++) {
+      var el = arguments[i],
+          $scrollElement = $(el);
+      if ($scrollElement.scrollTop()> 0) {
+        return el;
+      } else {
+        $scrollElement.scrollTop(1);
+        var isScrollable = $scrollElement.scrollTop()> 0;
+        $scrollElement.scrollTop(0);
+        if (isScrollable) {
+          return el;
+        }
+      }
+    }
+    return [];
+  }
+ 
+});
     </script>
         </html>

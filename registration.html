@@ -75,12 +75,12 @@
                                 <br>
                                 <br>
                                 <div class="registrationForm">
-                                <form action="registerSolo.php" method="post">
+                                <form action="http://formspree.io/jgadiane@gmail.com" method="post">
                             <div class="form-group">
                                   <input type="text" id="nameSolo" name="nameSolo" class="form-control inputReg" placeholder="Name">
                                   <input type="text" id="regionSolo" name="regionSolo" class="form-control inputReg " placeholder="Region">
                                   <input type="text" id="chapterSolo" name="chapterSolo" class="form-control inputReg" placeholder="Local Chapter">
-                                  <input type="text" id="shirtSolo" name="shirtSolo" class="form-control inputReg" placeholder="Size">
+                                  <input type="text" id="shirtSolo" name="shirtSolo" class="form-control inputReg" placeholder="Shirt Size">
                                   <div class="col-sm-6" style="padding:0;">
                                       <input type="text" id="courseSolo" name="courseSolo" class="form-control inputReg" placeholder="Course">
                                   </div>
@@ -119,19 +119,19 @@
                         <br>
                             <div class="groupContainer">
 
-                                <form action="registerGroup.php" method="post">
+                                <form id="groupform" method="post">
                     <div class="form-group">
                       <div class="col-sm-6" style="padding:0;">
                       <label for="regionGroup" class="repInfo"><h3 class="bolder">Representative Information</h3></label>
-                      <input type="text" id="regionGroup" name="regionGroup" class="form-control" placeholder="Region">
+                      <input type="text" id="regionGroup" name="Region" class="form-control" placeholder="Region">
                       <label for="chapterGroup">Local Chapter(School)</label>
-                      <input type="text" id="chapterGroup" name="chapterGroup" class="form-control" placeholder="Local Chapter">
+                      <input type="text" id="chapterGroup" name="Chapter" class="form-control" placeholder="Local Chapter">
                       <label for="namecontactGroup">Name of Contact Person</label>
-                      <input type="text" id="namecontactGroup" name="namecontactGroup" class="form-control" placeholder="Name">
+                      <input type="text" id="namecontactGroup" name="Namecontact" class="form-control" placeholder="Name">
                       <label for="contactGroup">Contact No.</label>
-                      <input type="text" id="contactGroup" name="contactGroup" class="form-control" placeholder="Contact">
+                      <input type="text" id="contactGroup" name="Contact" class="form-control" placeholder="Contact">
                       <label for="positionGroup">Position</label>
-                      <input type="text" id="positionGroup" name="positionGroup" class="form-control" placeholder="Position">
+                      <input type="text" id="positionGroup" name="Position" class="form-control" placeholder="Position">
                       </div>
                       <div class="col-sm-6">
                       <br>
@@ -146,22 +146,22 @@
                                       <p style="width:100%;color:black;">1</p>
                                   </div>
                                   <div class="col-sm-5" style="padding:0;">
-                                    <input type="text" id="nameGroup" name="nameGroup1" class="form-control" placeholder="Name">
+                                    <input type="text" id="nameGroup" name="Name" class="form-control" placeholder="Name">
                                   </div>
                                   <div class="col-sm-4" style="padding:0;">
-                                    <input type="text" id="courseGroup" name="courseGroup1" class="form-control" placeholder="Course">
+                                    <input type="text" id="courseGroup" name="Course" class="form-control" placeholder="Course">
                                   </div>
                                   <div class="col-sm-2" style="padding:0;">
-                                    <input type="text" id="yearGroup" name="yearGroup1" class="form-control" placeholder="Year">
+                                    <input type="text" id="yearGroup" name="Year" class="form-control" placeholder="Year">
                                   </div>
                                   <div class="col-sm-4" style="padding:0;">
-                                    <input type="text" id="contactSpecificGroup" name="contactSpecificGroup1" class="form-control" placeholder="Contact">
+                                    <input type="text" id="contactSpecificGroup" name="Contact" class="form-control" placeholder="Contact">
                                   </div>
                                   <div class="col-sm-5" style="padding:0;">
-                                    <input type="text" id="emailSpecificGroup" name="emailSpecificGroup1" class="form-control" placeholder="Email">
+                                    <input type="text" id="emailSpecificGroup" name="Email" class="form-control" placeholder="Email">
                                   </div>
                                   <div class="col-sm-2" style="padding:0;">
-                                    <input type="text" id="sizeGroup" name="sizeGroup1" class="form-control" placeholder="Size">
+                                    <input type="text" id="sizeGroup" name="Size" class="form-control" placeholder="Shirt Size">
                                   </div>
                               </div>
                           </div>
@@ -171,7 +171,8 @@
                       <center><button id="addRow" type="button" class="registrationButton addRow" onclick="addRowFunction(this)">Add Row</button></center>
                       </div>
 
-                      <center><button id="regButton2" class="registrationButton group">Group Registration</button></center>
+                      <center><button type="submit" id="regButton2" class="registrationButton group">Group Registration</button></center>
+
                     
                     </div>
                 </form> 
@@ -196,20 +197,23 @@
                 <center>
                 <div class="col-sm-8">
                     <h4 class="bolder">(c)John Leeroy Gadiane 2016, All Rights Reserved</h4>
+                    <pre id="result">asdasd</pre>
                 </div>
                 </center>
             </div>
         </div>
+
         </content>
     </body>
-    <link rel="stylesheet" type="text/javascript" href="js/bootstrap.js">
-    <link rel="stylesheet" type="text/javascript" href="js/npm.js">
+    <script src="js/bootstrap.js"></script>
+    <script src="js/npm.js"></script>
+    <script src="js/jquery.js"></script>
     <script type="text/javascript">
         
         function addRowFunction(e){
             var row = document.getElementById("contentGroup");
             var idNum = parseInt(document.getElementById('idnum').value)+1;
-            row.insertAdjacentHTML('beforeend','<div class="col-sm-12"><div class="col-sm-1" style="padding:0;"><p style="width:100%;color:black;">'+idNum+'</p></div><div class="col-sm-5" style="padding:0;"><input type="text" id="nameGroup" name="nameGroup'+idNum+'" class="form-control" placeholder="Name"></div><div class="col-sm-4" style="padding:0;"><input type="text" id="courseGroup" name="courseGroup'+idNum+'" class="form-control" placeholder="Course"></div><div class="col-sm-2" style="padding:0;"><input type="text" id="yearGroup" name="yearGroup'+idNum+'" class="form-control" placeholder="Year"></div><div class="col-sm-4" style="padding:0;"><input type="text" id="contactSpecificGroup" name="contactSpecificGroup'+idNum+'" class="form-control" placeholder="Contact"></div><div class="col-sm-5" style="padding:0;"><input type="text" id="emailSpecificGroup" name="emailSpecificGroup'+idNum+'" class="form-control" placeholder="Email"></div><div class="col-sm-2" style="padding:0;"><input type="text" id="sizeGroup" name="sizeGroup'+idNum+'" class="form-control" placeholder="Size"</div></div>');
+            row.insertAdjacentHTML('beforeend','<div class="col-sm-12"><div class="col-sm-1" style="padding:0;"><p style="width:100%;color:black;">'+idNum+'</p></div><div class="col-sm-5" style="padding:0;"><input type="text" id="nameGroup" name="Name'+idNum+'" class="form-control" placeholder="Name"></div><div class="col-sm-4" style="padding:0;"><input type="text" id="courseGroup" name="Course'+idNum+'" class="form-control" placeholder="Course"></div><div class="col-sm-2" style="padding:0;"><input type="text" id="yearGroup" name="Year'+idNum+'" class="form-control" placeholder="Year"></div><div class="col-sm-4" style="padding:0;"><input type="text" id="contactSpecificGroup" name="Contact'+idNum+'" class="form-control" placeholder="Contact"></div><div class="col-sm-5" style="padding:0;"><input type="text" id="emailSpecificGroup" name="Email'+idNum+'" class="form-control" placeholder="Email"></div><div class="col-sm-2" style="padding:0;"><input type="text" id="sizeGroup" name="Size'+idNum+'" class="form-control" placeholder="Size"</div></div>');
             document.getElementById('idnum').value = idNum;
         }
 
@@ -219,5 +223,40 @@
         function scrollToGroup(){
             window.scrollTo(0, 1240);
         }
+
+        function download(text, name, type) {
+            var a = document.createElement("a");
+            var file = new Blob([text], {type: type});
+            a.href = URL.createObjectURL(file);
+            a.download = name;
+            a.click();
+        }                 
+    </script>
+
+    <script>
+
+      $.fn.serializeObject = function()
+      {
+          var o = {};
+          var a = this.serializeArray();
+          $.each(a, function() {
+              if (o[this.name] !== undefined) {
+                  if (!o[this.name].push) {
+                      o[this.name] = [o[this.name]];
+                  }
+                  o[this.name].push(this.value || '');
+              } else {
+                  o[this.name] = this.value || '';
+              }
+          });
+          return o;
+      };
+
+      $(function() {
+          $('#groupform').submit(function() {
+              download(JSON.stringify($('#groupform').serializeObject()),'json/masterlist.json','text/plain');
+              return false;
+          });
+      });
     </script>
 </html>

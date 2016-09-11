@@ -20,11 +20,8 @@
 
 		$sql = "CREATE TABLE IF NOT EXISTS articles (
 			id INT(1) AUTO_INCREMENT PRIMARY KEY,
-			title VARCHAR(255) NOT NULL,
-			subtitle VARCHAR(255),
+			title VARCHAR(50) NOT NULL,
 			body TEXT,
-			author VARCHAR(100),
-			image MEDIUMBLOB,
 			created DATETIME,
 			modified DATETIME
 		)";
@@ -79,33 +76,6 @@
 	function getStudents(){
 		$conn = connectDB();
 		$sql = "SELECT * from registrants";
-
-		$result = mysqli_query($conn,$sql);
-		$rows = array();
-	    while($row = $result->fetch_assoc()) {
-	        $rows[] = $row;
-	    }
-	    return $rows;
-
-
-	}
-
-	function newBlog($title,$subtitle,$body,$author,$img){
-		$conn = connectDB();
-
-		$sql = "INSERT INTO articles (id,title,subtitle,body,author,image,created,modified) VALUES (0,'$title','$subtitle','$body','$author','$img', null,null)";
-
-		if (mysqli_query($conn, $sql)) {
-		    echo "New record created successfully";
-		} else {
-		    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-		}
-
-	}
-
-	function getArticles(){
-		$conn = connectDB();
-		$sql = "SELECT * from articles";
 
 		$result = mysqli_query($conn,$sql);
 		$rows = array();
