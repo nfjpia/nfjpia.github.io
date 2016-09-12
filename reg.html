@@ -1,0 +1,204 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>19th NMYC Registration</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/grayscale.css">
+        
+        <script>
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == null || x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+}
+</script>
+    </head>
+
+      
+          <form method="POST" action="http://formspree.io/nmyc.nfjpia1617@gmail.com">
+    <center><img src="img/nymclogo.png"  width="300" height="300"></center>
+      <h1>Registration Form</h1>
+              <label class="light" for="design"><center>You should fill all the neccessary fields.</center></label><br>
+        <fieldset>
+          <legend><span class="number">1</span>Your basic info</legend>
+          <label for="name">FirstName: </label>
+          <input type="text" id="name" name="First Name" onsubmit="return validateForm()" method="post">
+              <label for="name">Middle Name: </label>
+          <input type="text" id="name" name="Middle Name">
+              <label for="name">Surname </label>
+          <input type="text" id="name" name="Surname">
+           
+            <label for="name">Nick Name </label>
+          <input type="text" id="nickname" name="Nickname">
+            
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" name="Email">
+            
+             <label for="address">Address</label>
+          <input type="text" id="Address" name="Address">
+         
+          
+          <label>Gender</label>
+          <input type="radio" id="Male" value="Male" name="Gender"><label for="Male" class="light">Male</label>
+            <br>
+          <input type="radio" id="Female" value="Female" name="Gender"><label for="Female" class="light">Female</label>
+        </fieldset>
+           <label>Birthday</label>
+            <select id="bmonth" name="Birth Month" required>
+          <optgroup label="Month">
+            <option value="Jan">January</option>
+            <option value="Feb">February</option>
+            <option value="Mar">March</option>
+            <option value="Apr">April</option>
+            <option value="May">May</option>
+            <option value="Jun">June</option>
+ 	    <option value="Jul">July</option>
+            <option value="Aug">August</option>
+            <option value="Sept">September</option> 
+	    <option value="Oct">October</option>
+            <option value="Nov">November</option>
+            <option value="Dec">December</option>
+            </optgroup>
+          </select>
+          
+             <select id="bday" name="Birthday">
+          <optgroup label="day">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+ 	    <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option> 
+	    <option value="10">10</option>
+      	    <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+ 	    <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option> 
+	    <option value="20">20</option>
+      	    <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+ 	    <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option> 
+	    <option value="30">30</option>
+	    <option value="31">31</option>
+              
+            </optgroup>
+                 
+        
+          </select>
+          <label for="bYear">Birthyear</label>
+          <input type="number" id="BYear" name="Birthyear">
+          
+           <label for="RC">Regional Chapter</label>
+           <select id="RC" name="user_RC">
+          <optgroup label="Regional Chapter">
+        
+              <option value="NCR">National Capital Region</option>
+            <option value="R1&CAR">Region 1 and CAR</option>
+            <option value="R2">Region 2</option>
+            <option value="R3">Region 3</option>
+            <option value="R4">Region 4</option>
+            <option value="R5">Region 5</option>
+            <option value="R6">Region 6</option>
+            <option value="R7">Region 7</option>
+            <option value="R8">Region 8</option>
+            <option value="R9">Region 9</option>
+            <option value="R10&CARAGA">Region 10 and CARAGA</option>
+            <option value="R11">Region 11</option>
+            <option value="R2">Region 12</option>
+            
+          </optgroup>
+    
+           </select>
+      
+              <label for="LC">Local Chapter</label>
+          <input type="text" id="LC" name="Local Chapter">
+
+          <legend><span class="number">2</span>Are you joining an event?</legend>
+                 
+       <label>If you are a contestant in any of the following competition/s, please mark the designated box. </label>
+        
+    
+        
+          <label>Academic Events</label>
+<input type="checkbox" id="acad" value="FAR" name="Academic Events">
+<label class="light" for="design">Financial Accounting & Reporting Cup</label><br>
+
+<input type="checkbox" id="acad" value="AFAR" name="Academic Events">
+<label class="light" for="design">Advance Fin. Acctng. & Reporting Cup</label><br>
+
+<input type="checkbox" id="acad" value="RFBT" name="Academic Events">
+<label class="light" for="design">Regulatory Framework for Bussiness Trans. Cup</label><br>
+
+<input type="checkbox" id="acad" value="MAC" name="Academic Events">
+<label class="light" for="design">Management Accounting & Control Cup</label><br>
+
+<input type="checkbox" id="acad" value="Auditing" name="Academic Events">
+<label class="light" for="design">Auditing Cup</label><br>
+
+<input type="checkbox" id="acad" value="Tax" name="Academic Events">
+<label class="light" for="design">Taxation Cup</label><br>
+
+<input type="checkbox" id="acad" value="NAQdown" name="Academic Events">
+<label class="light" for="design">NAQDown</label><br>
+
+<input type="checkbox" id="acad" value="Business Case Competition" name="Academic Events">
+<label class="light" for="design">Business Case Competition</label><br>
+
+<input type="checkbox" id="acad" value="Financial Accounting & Reporting Cup" name="Academic Events">
+<label class="light" for="design">Specialized Case Study</label><br>
+          
+          <label>Non-Academic Events</label>
+          
+<input type="checkbox" id="non-acad" value="Lip Sync Battle" name="Non-Academic Events">
+<label class="light" for="design">Lip Sync Battle</label><br>
+
+<input type="checkbox" id="non-acad" value="JPIA Parody" name="Non-Academic Events">
+<label class="light" for="design">JPIA Parody</label><br>
+
+<input type="checkbox" id="non-acad" value="NFJPIA Best Dance Crew" name="Non-Academic Events">
+<label class="light" for="design">NFJPIA Best Dance Crew</label><br>
+        
+<input type="checkbox" id="non-acad" value="Speak Up!" name="Non-Academic Events">
+<label class="light" for="design">Speak Up!</label><br>
+           
+<input type="checkbox" id="non-acad" value="Non-Academic Quiz Showdown" name="Non-Academic Events">
+<label class="light" for="design">Non-Academic Quiz Showdown</label><br>       												
+           
+<input type="checkbox" id="non-acad" value="Ambassadors of Goodwill" name="Non-Academic Events">
+<label class="light" for="design">Ambassadors of Goodwill</label><br>       
+                     
+<input type="checkbox" id="non-acad" value="Siniratura v3.0" name="Non-Academic Events">
+<label class="light" for="design">Siniratura v3.0</label><br>       
+          <br>
+    <a>NOTE!</a>
+											  <label>After filling-out this application form. You can directly pay your Registration Fee to: <br><br>
+              BPI Bank Account<br>
+              Account Name: NFJPIA Region 4<br>
+              Account Number: 8853-1535-84 <br><br>
+              After Payment Please do send the deposit slips to vpfinance.nfjpia1617@gmail.com</label>
+											
+            
+             	<br> <br>
+  <button type="submit">Send</button>
+ </form>
+      
+    </body>
+</html>
