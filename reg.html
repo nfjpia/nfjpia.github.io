@@ -25,6 +25,15 @@ function validateForm() {
               <label class="light" for="design"><center>You should fill-out all the neccessary fields.</center></label><br>
         <fieldset>
           <legend><span class="number">1</span>Your basic info</legend>
+<label for="memstat> JPIAn or Non JPIAn?</label>
+<input type="checkbox" id="memstat" value="JPIAn" name="MemStat">
+<label class="light" for="design">I'm a JPIAn</label>
+
+
+
+<input type="checkbox" id="memstat" value="Non-JPIAn" name="MemStat">
+<label class="light" for="design">Non-JPIAn</label>
+
           <label for="name">FirstName: </label>
           <input type="text" id="name" name="First Name" onsubmit="return validateForm()" method="post">
               <label for="name">Middle Name: </label>
@@ -34,8 +43,7 @@ function validateForm() {
            
             <label for="name">Nick Name </label>
           <input type="text" id="nickname" name="Nickname">
-            
-          <label for="mail">Email:</label>
+                <label for="mail">Email:</label>
           <input type="email" id="mail" name="Email">
             
              <label for="address">Address</label>
