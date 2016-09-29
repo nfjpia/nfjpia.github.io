@@ -1,0 +1,428 @@
+.navbar{
+    margin: 0 0 0 0;
+}
+
+body{
+            font-family: 'Lato';
+}
+
+.brandText{
+    font-weight: bolder;
+}
+.userDropdown{
+    color:black;
+    font-weight: 500;
+}
+
+#navbartext{
+    color:white;
+}
+
+#navbartext > p{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#navbartext > p:hover{
+    color:#337ab7;
+}
+
+.navbar-static-top .navbar-nav > li > a:hover, .navbar-static-top .navbar-nav > li > a:focus {
+    background-color: transparent;
+}
+
+.firstContent{
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0)
+    ),url('../img/temporary.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 620px;
+   
+  
+}
+
+.containerFirst{
+    height: 600px;
+    font-size: 15px;
+    font-weight: bold;
+    color: steelblue;
+    width: 100%;
+}
+
+.containerFirst h1{
+    font-weight: bolder;
+    font-size: 65px;
+}
+.containerFirst h2{
+    font-weight: bolder;
+    font-size: 65px;
+}
+
+.secondContent{
+    width: 100%;
+    height: 660px;
+    position: relative;
+    background-color: #ecf0f1;
+}
+
+.thirdContent{
+    width: 100%;
+    height: 200px;
+    position: relative;
+    background-color: #2196F3;
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),url('../img/abstract.jpg');
+ 
+    background-position: 0% 50%;
+}
+
+.fourthContent{
+    width: 100%;
+    height: 600px;
+    position: relative;
+    background-color: #ecf0f1;
+}
+
+.fifthContent{
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),url('../img/leadership.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 200px;
+    position: relative;
+    background-position: 0% 10%;
+}
+
+.contactUs{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background-color: #ecf0f1;
+}
+
+.event{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background-color: white;
+}
+
+.socialMedia{
+    width: 100%;
+    height: 150px;
+    position: relative;
+    background-color: #bdc3c7;
+}
+
+.footer{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    background-color: #2c3e50;
+}
+
+.bolder{
+    font-weight: bolder;
+}
+
+.bold{
+    font-weight: 00;
+}
+
+.larger{
+    font-size: 60px;
+}
+
+
+.large{
+    font-size:50px;
+}
+
+.largest{
+    font-size:100px;
+}
+
+.info-text{
+    font-size:16px;
+    text-align: justify;
+}
+
+.subtext{
+    text-align: left;
+}
+
+.vision-text{
+    color: white;
+}
+
+.absolute{
+    position: inherit;
+}
+
+.midnight-blue{
+    color: #2c3e50;
+}
+
+.blog_container{
+    background-color:white;
+    width: 900px;
+    height: 400px;
+  
+}
+
+.blog_content{
+    text-align: left;
+    margin-left: 20px;
+}
+
+.firstBlog, .secondBlog{
+
+    padding-top: 40px;
+    padding-right: 40px;
+}
+
+.col-sm-7 input, .col-sm-7 textarea, .col-sm-7 button{
+    width: 100%;
+    margin-left: 5px;
+    border-style: none;
+}
+.inputs{
+    margin-top: 50px;
+}
+
+.col-sm-7 button{
+    background-color: steelblue;
+    border-style: solid;
+    border-width: 1px;
+    border-color: steelblue;
+    margin-top: 20px;
+}
+
+.contactUs p{
+    font-size: 24px;
+}
+
+.submessages{
+    text-align: left;
+}
+
+.socialMedia .col-sm-4 h2{
+    display: inline-block;
+}
+
+.footer{
+    color: white;
+}
+
+.footer p{
+    font-size: 10px;
+}
+.footer .row{
+   
+}
+
+.registrationButton{
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.solo{
+    background-color:#f39c12;
+}
+
+.group{
+    background-color: steelblue;
+    width: 100%;
+}
+
+.addRow{
+    height:20px;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #34495e;
+}
+
+.registrationForm{
+    padding: 10px 10px;
+    width:100%;
+    height: 100%;
+    color: steelblue;
+}
+
+.inputReg{
+    border-radius: 0px;
+    margin-top:10px;
+}
+
+.form-group label{
+    font-size: 12px;
+}
+
+.firstContentReg{
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0)
+    
+    width: 100%;
+    height: 620px;
+    position: relative;
+  
+}
+
+.secondContentReg{
+    background-image: linear-gradient(
+     
+    ),url('../img/wollpiper.jpg');
+    width: 100%;
+    height: 620px;
+    position: relative;
+
+}
+
+.thirdContentReg{
+    background-color: white;
+    width: 100%;
+    height: 620px;
+    position: relative;
+   
+}
+
+.firstContentBlog{
+}
+
+.addRowReg{
+    width: 100%;
+    background-color: #34495e;
+}
+
+.group{
+    background-color: #2c3e50;
+}
+
+.mainButton{
+    width: 250px;
+    height: 75px;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.groupContainer{
+    background-color: steelblue;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding:20px 20px;
+}
+
+.thirdContentReg h1, .thirdContentReg h4{
+    color: #2c3e50;
+}
+
+.regButton{
+    width: 250px;
+    height: 75px;
+    background-color: #2c3e50;
+    border-style: none;
+    color: #ecf0f1;
+    font-size: 24px;
+}
+
+.navText h1 a{
+    cursor: pointer;
+
+}
+.navText h1 a:hover{
+    text-decoration: none;
+    color: #ecf0f1;
+    font-weight: bolder;
+}
+
+.repInfo{
+    color: #2c3e50;
+}
+
+.aboutUsMainText{
+    font-size: 300px;
+
+}
+
+.firstContentAbout{
+    background-color: #ecf0f1;
+}
+
+
+
+
+
+.cloud{
+    color: #ecf0f1;
+}
+
+.secondContentAbout{
+    width: 100%;
+    height: 620px;
+    position: relative;
+    background-color: #ecf0f1;
+}
+
+.nfjpiaLogo p{
+    font-size: 20px;
+}
+
+.thirdContentAbout{
+    width: 100%;
+    height: 620px;
+    position: relative;
+    background-color: #bdc3c7;
+}
+
+.navText{
+    margin-top:350px;
+}
+
+.noHover:hover{
+    text-decoration-line: underline;
+    text-decoration-line: overline;
+    color: #ecf0f1;
+
+}
+
+.noHover2:hover{
+    text-decoration-line: underline;
+    color: #2c3e50;
+}
+
+
+.underConstruction{
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),url('../img/construction.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    padding: 0 0 0;
+    margin: 0;
+}
+
+body{
+    margin:0;
+}
