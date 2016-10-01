@@ -25,7 +25,7 @@ function validateForm() {
               <label class="light" for="design"><center>You should fill-out all the neccessary fields.</center></label><br>
         <fieldset>
           <legend><span class="number">1</span>Your basic info</legend>
-<label for="memstat> JPIAn or Non JPIAn?</label><br>
+<label for="memstat> JPIAn? or Non JPIAn? or Adviser?</label><br>
 
 <input type="checkbox" id="memstat" value="VoidAn" name="MemStat">
 <label class="light" for="design"></label>
@@ -35,6 +35,8 @@ function validateForm() {
 
 <input type="checkbox" id="memstat" value="Non-JPIAn" name="MemStat">
 <label class="light" for="design">Non-JPIAn</label>
+				 <input type="checkbox" id="memstat" value="Adviser" name="MemStat">
+<label class="light" for="design">Adviser</label>
 
           <label for="name">FirstName: </label>
           <input type="text" id="name" name="First Name" onsubmit="return validateForm()" method="post">
