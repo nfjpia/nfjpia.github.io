@@ -547,12 +547,6 @@ span.middot {
 	overflow: hidden;
 }
 
-.mobile-parallax,
-.video-placeholder {
-	background-size: cover !important;
-	background-attachment: scroll !important;
-	background-position: center center;
-}
 
 .section .container { z-index: 2; }
 
@@ -1076,7 +1070,7 @@ body.stretched #header.full-header .container {
 
 #primary-menu { float: right; }
 
-#primary-menu ul.mobile-primary-menu { display: none; }
+
 
 #header.full-header #primary-menu > ul {
 	float: left;
