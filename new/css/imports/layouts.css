@@ -27,12 +27,7 @@
 	overflow: hidden;
 }
 
-.mobile-parallax,
-.video-placeholder {
-	background-size: cover !important;
-	background-attachment: scroll !important;
-	background-position: center center;
-}
+
 
 .section .container { z-index: 2; }
 
